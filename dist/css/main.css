@@ -46,9 +46,18 @@ img {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
-    border-bottom: 3px transparent solid; }
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s; }
+    #main-nav a:hover {
+      border-color: #ccc; }
+    #main-nav a:current {
+      border-color: #ffbc00; }
 
 #header-home {
   background: url("../img/showcase.jpg") no-repeat center right/cover;
   height: 100vh;
   color: #fff; }
+  #header-home .header-content {
+    text-align: center;
+    padding-top: 20%; }
