@@ -72,11 +72,11 @@
     &-a {
       .about-info {
         grid-template-areas:
-          'bioimage'
-          'bio'
-          'aw1'
-          'aw2'
-          'aw3';
+          "bioimage"
+          "bio"
+          "aw1"
+          "aw2"
+          "aw3";
       }
     }
 
@@ -90,11 +90,11 @@
     &-a {
       .text-fields {
         grid-template-areas:
-          'name'
-          'subject'
-          'email'
-          'phone'
-          'message';
+          "name"
+          "subject"
+          "email"
+          "phone"
+          "message";
       }
     }
 
