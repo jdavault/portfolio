@@ -1,43 +1,24 @@
 .container {
   max-width: $website-width;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   margin: auto;
   overflow: hidden;
 }
 
-// Buttons
 %btn-shared {
   display: inline-block;
-  padding: 1rem 2.5rem;
+  padding: 0.875rem 2.25rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   cursor: pointer;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: $radius-sm;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 0.875rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.75px;
+  font-size: 0.8125rem;
+  font-family: inherit;
   position: relative;
   overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-  }
-
-  &:hover::before {
-    width: 300px;
-    height: 300px;
-  }
 }
 
 .btn {
@@ -45,24 +26,24 @@
     @extend %btn-shared;
     color: #fff;
     background: linear-gradient(135deg, $main-color, $accent-color);
+    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.35);
 
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(14, 165, 233, 0.45);
     }
   }
 
   &-light {
     @extend %btn-shared;
-    color: $dark-color;
-    background-color: #fff;
-    border: 2px solid #e2e8f0;
+    color: #fff;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4);
 
     &:hover {
-      background-color: $light-color;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-      border-color: $main-color;
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.7);
+      transform: translateY(-2px);
     }
   }
 
@@ -70,15 +51,15 @@
     @extend %btn-shared;
     color: #fff;
     background: linear-gradient(135deg, $dark-color, $darker-color);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }
   }
 }
 
-// Backgrounds
 .bg {
   &-main {
     background: $main-color;
@@ -92,76 +73,64 @@
     background: $light-color;
     color: set-text-color($light-color);
   }
-  &-medium {
-    background: $medium-color;
-    color: set-text-color($medium-color);
-  }
 }
 
 .lead {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   margin-bottom: 2rem;
   line-height: 1.8;
   color: $text-muted;
   font-weight: 400;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .text-center {
   text-align: center;
 }
 
-// Padding
 .py {
-  &-1 {
-    padding: 1rem 0;
-  }
-  &-2 {
-    padding: 2rem 0;
-  }
-  &-3 {
-    padding: 3rem 0;
-  }
-  &-4 {
-    padding: 4rem 0;
-  }
+  &-1 { padding: 1.5rem 0; }
+  &-2 { padding: 3rem 0; }
+  &-3 { padding: 5rem 0; }
+  &-4 { padding: 7rem 0; }
 }
 
-// Margin
 .my {
-  &-1 {
-    margin: 1rem 0;
-  }
-  &-2 {
-    margin: 2rem 0;
-  }
-  &-3 {
-    margin: 3rem 0;
-  }
-  &-4 {
-    margin: 4rem 0;
-  }
+  &-1 { margin: 1rem 0; }
+  &-2 { margin: 2rem 0; }
+  &-3 { margin: 3rem 0; }
+  &-4 { margin: 4rem 0; }
 }
 
 .section-title {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   display: block;
   padding-bottom: 0.75rem;
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.5px;
-  background: linear-gradient(135deg, $dark-color, lighten($dark-color, 15%));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: $dark-color;
 }
 
 .bottom-line {
-  height: 4px;
-  width: 5rem;
+  height: 3px;
+  width: 4rem;
   background: linear-gradient(90deg, $main-color, $accent-color);
   display: block;
   margin: 0 auto 1.5rem auto;
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

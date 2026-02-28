@@ -1,151 +1,159 @@
-// Tablets & Smaller
-@media (max-width: 800px) {
-  #header-home {
-    height: 30rem;
+@media (max-width: 1024px) {
+  #home-a .specials,
+  #home-c .tech-grid,
+  #home-d .process {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .header-content {
-      padding-top: 5rem;
-    }
+  #home-b .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #about-d .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #about-b .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
-// Smartphones
-@media (max-width: 500px) {
-  #main-nav {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 768px) {
+  #header-home {
+    .header-content {
+      h1 {
+        font-size: 2.5rem;
+      }
 
-    li {
-      padding: 1rem;
-    }
-  }
+      .header-btns {
+        flex-direction: column;
+        width: 100%;
 
-  #header {
-    &-home {
-      height: 10rem;
-      border-bottom: 3px solid $main-color;
-      background-position: 20% 30%;
-
-      .header-content {
-        display: none;
+        a {
+          width: 100%;
+          text-align: center;
+        }
       }
     }
-
-    &-inner {
-      height: 10rem;
-    }
   }
 
-  // Stack Grid Columns
   #home-a .specials,
-  #home-b .stats,
-  #home-c .process,
+  #home-c .tech-grid,
+  #home-d .process,
   #about-d .testimonials,
-  #contact-b .contact-info,
-  .items {
+  #contact-b .contact-info {
     grid-template-columns: 1fr;
   }
 
-  // Home
-  #home {
-    &-a {
-      .specials div {
-        border-bottom: 1px $light-color solid;
-        padding-bottom: 1rem;
+  #home-b .stats {
+    grid-template-columns: repeat(2, 1fr);
 
-        &:last-child {
-          border: none;
-          padding-bottom: 0;
-        }
-      }
-    }
-
-    &-b {
-      .stats div {
-        padding: 2rem 0 1rem 0;
-      }
+    div {
+      padding: 2rem 0;
     }
   }
 
-  // About
-  #about {
-    &-a {
-      .about-info {
-        grid-template-areas:
-          "bioimage"
-          "bio"
-          "aw1"
-          "aw2"
-          "aw3";
-      }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #about-a .about-info {
+    grid-template-areas:
+      'bioimage'
+      'bio'
+      'aw1'
+      'aw2'
+      'aw3';
+  }
+
+  #about-b .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #contact-a .text-fields {
+    grid-template-areas:
+      'name'
+      'email'
+      'subject'
+      'phone'
+      'message';
+  }
+}
+
+@media (max-width: 500px) {
+  #main-nav {
+    ul {
+      gap: 0;
     }
 
-    &-c {
-      display: none;
+    li {
+      padding: 0 0.5rem;
+    }
+
+    a {
+      font-size: 0.7rem !important;
     }
   }
 
-  // Contact
-  #contact {
-    &-a {
-      .text-fields {
-        grid-template-areas:
-          "name"
-          "subject"
-          "email"
-          "phone"
-          "message";
-      }
-    }
+  #header-home {
+    .header-content {
+      padding: 0 1rem;
 
-    &-b {
-      div {
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px #555 solid;
-
-        &:last-child {
-          border: none;
-          margin-bottom: 0;
-          padding-bottom: 0;
-        }
-      }
-    }
-
-    &-c {
       h1 {
         font-size: 2rem;
       }
+
+      .tag {
+        font-size: 0.7rem;
+      }
+
+      .lead {
+        font-size: 1rem;
+      }
     }
   }
 
-  // Footer
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .py-3 {
+    padding: 3rem 0;
+  }
+
+  #home-b .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #work-cta h2 {
+    font-size: 1.75rem;
+  }
+
+  #contact-c h2 {
+    font-size: 1.5rem;
+  }
+
   #main-footer {
-    height: 7rem;
+    height: auto;
 
     .footer-content {
       flex-direction: column;
-      padding: 1rem;
-      height: 5rem;
-    }
-  }
-}
-
-// Landscape
-@media (max-height: 580px) {
-  #header-home {
-    .header-content {
-      padding-top: 3rem;
-    }
-  }
-}
-
-@media (max-height: 330px) {
-  #header-home {
-    .header-content {
-      h1 {
-        font-size: 2rem;
-      }
+      padding: 1.5rem 0;
+      height: auto;
+      gap: 0.75rem;
     }
   }
 }
