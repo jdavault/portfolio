@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "sass --watch scss/:dist/css/ --no-source-map",
+    "build": "sass scss/:dist/css/ --no-source-map"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^5.0.0"
+    "sass": "^1.83.0"
   }
 }
