@@ -191,15 +191,9 @@ img {
       span {
         display: inline-block;
         width: 1px;
-        height: 48px;
-        background: linear-gradient(180deg, $main-color, transparent);
-        animation: scrollPulse 2s ease-in-out infinite;
+        height: 40px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.3), transparent);
       }
-    }
-
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 1; transform: scaleY(1); }
-      50% { opacity: 0.4; transform: scaleY(0.6); }
     }
   }
 
@@ -854,6 +848,139 @@ img {
           background: rgba(14, 165, 233, 0.1);
           transform: translateY(-2px);
         }
+      }
+    }
+  }
+}
+
+.experience-timeline {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.exp-item {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child { border-bottom: none; }
+
+  .exp-date {
+    min-width: 140px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: $main-color;
+    padding-top: 0.25rem;
+  }
+
+  .exp-content {
+    flex: 1;
+
+    h3 {
+      font-size: 1.15rem;
+      color: $dark-color;
+      margin-bottom: 0.25rem;
+      text-transform: none;
+    }
+
+    .exp-company {
+      font-weight: 600;
+      color: $text-muted;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: $text-muted;
+      line-height: 1.7;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+
+      span {
+        font-size: 0.7rem;
+        font-weight: 500;
+        padding: 0.2rem 0.5rem;
+        background: rgba(14, 165, 233, 0.08);
+        color: $main-color;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edu-item {
+  background: #fff;
+  border: 1px solid $border-color;
+  border-radius: $radius-md;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: $card-shadow;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $card-shadow-hover;
+  }
+
+  h3 {
+    font-size: 1rem;
+    color: $dark-color;
+    margin-bottom: 0.25rem;
+    text-transform: none;
+  }
+
+  .edu-degree {
+    font-size: 0.875rem;
+    color: $text-muted;
+    margin-bottom: 0.25rem;
+  }
+
+  .edu-year {
+    font-size: 0.8125rem;
+    color: $main-color;
+    font-weight: 600;
+  }
+}
+
+#about-c {
+  background: $light-color;
+
+  .about-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    img {
+      width: auto;
+      max-height: 50px;
+      opacity: 0.5;
+      filter: grayscale(100%);
+      transition: all 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+        filter: grayscale(0%);
       }
     }
   }
