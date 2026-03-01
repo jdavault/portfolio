@@ -1,3 +1,5 @@
+@use 'config' as *;
+
 .container {
   max-width: $website-width;
   padding: 0 2rem;

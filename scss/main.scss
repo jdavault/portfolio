@@ -1,6 +1,7 @@
-@import 'config';
-@import 'utilities';
-@import 'item_grid';
+@use 'sass:meta';
+@use 'config' as *;
+@use 'utilities';
+@use 'item_grid';
 
 * {
   margin: 0;
@@ -987,4 +988,4 @@ img {
   }
 }
 
-@import 'media';
+@include meta.load-css('media');

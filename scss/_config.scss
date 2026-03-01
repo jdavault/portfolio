@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $website-width: 1280px;
 $main-color: #0ea5e9;
 $accent-color: #06b6d4;
@@ -15,7 +17,7 @@ $radius-md: 12px;
 $radius-lg: 16px;
 
 @function set-text-color($color) {
-  @if (lightness($color) > 50) {
+  @if (color.channel($color, "lightness", $space: hsl) > 50) {
     @return #1e293b;
   } @else {
     @return #f1f5f9;

@@ -484,19 +484,8 @@ img {
 #header-home .header-scroll-indicator span {
   display: inline-block;
   width: 1px;
-  height: 48px;
-  background: linear-gradient(180deg, #0ea5e9, transparent);
-  animation: scrollPulse 2s ease-in-out infinite;
-}
-@keyframes scrollPulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-  50% {
-    opacity: 0.4;
-    transform: scaleY(0.6);
-  }
+  height: 40px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), transparent);
 }
 #header-inner {
   background: linear-gradient(135deg, #020617, #0f172a);
@@ -896,8 +885,9 @@ img {
 }
 #about-d .testimonials {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
+  justify-items: center;
 }
 #about-d .testimonials > div {
   background: #fff;
@@ -1076,6 +1066,126 @@ img {
   transform: translateY(-2px);
 }
 
+.experience-timeline {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.exp-item {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.exp-item:last-child {
+  border-bottom: none;
+}
+.exp-item .exp-date {
+  min-width: 140px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #0ea5e9;
+  padding-top: 0.25rem;
+}
+.exp-item .exp-content {
+  flex: 1;
+}
+.exp-item .exp-content h3 {
+  font-size: 1.15rem;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+  text-transform: none;
+}
+.exp-item .exp-content .exp-company {
+  font-weight: 600;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+.exp-item .exp-content p {
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+.exp-item .exp-content .exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.exp-item .exp-content .exp-tags span {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  background: rgba(14, 165, 233, 0.08);
+  color: #0ea5e9;
+  border-radius: 4px;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edu-item {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+.edu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+.edu-item h3 {
+  font-size: 1rem;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+  text-transform: none;
+}
+.edu-item .edu-degree {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+.edu-item .edu-year {
+  font-size: 0.8125rem;
+  color: #0ea5e9;
+  font-weight: 600;
+}
+
+#about-c {
+  background: #f8fafc;
+}
+#about-c .about-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+#about-c .about-logos img {
+  width: auto;
+  max-height: 50px;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+#about-c .about-logos img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
 @media (max-width: 1024px) {
   #home-a .specials,
   #home-c .tech-grid,
@@ -1091,6 +1201,10 @@ img {
   }
   #about-d .testimonials {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .experience-timeline .exp-item {
+    flex-direction: column;
+    gap: 0.5rem;
   }
   #about-b .skills-grid {
     grid-template-columns: repeat(2, 1fr);
