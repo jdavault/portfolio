@@ -18,6 +18,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .experience-timeline .exp-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   #about-b .skills-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
