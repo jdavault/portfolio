@@ -455,7 +455,7 @@ img {
 }
 #header-home .header-content h1 .txt-type .cursor {
   -webkit-text-fill-color: #0ea5e9;
-  animation: blink 0.7s infinite;
+  animation: blink 1s infinite;
 }
 @keyframes blink {
   0%, 100% {
@@ -1184,6 +1184,28 @@ img {
 #about-c .about-logos img:hover {
   opacity: 1;
   filter: grayscale(0%);
+}
+#about-c .about-logos .tech-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  color: #0f172a;
+}
+#about-c .about-logos .tech-logo i {
+  font-size: 2.5rem;
+}
+#about-c .about-logos .tech-logo span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#about-c .about-logos .tech-logo:hover {
+  opacity: 1;
+  color: #0ea5e9;
 }
 
 @media (max-width: 1024px) {
